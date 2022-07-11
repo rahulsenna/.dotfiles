@@ -1,5 +1,6 @@
 # Dispay Graphics
 sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom
+cp /etc/X11/xinit/xinitrc .xinitrc
 
 # Installing Yay
 sudo pacman -S --needed base-devel git
