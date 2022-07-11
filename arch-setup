@@ -1,6 +1,6 @@
 # Dispay Graphics
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom alacritty ranger ttf-jetbrains-mono ttf-font-awesome
-cp /etc/X11/xinit/xinitrc .xinitrc
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom alacritty ranger pcmanfm ttf-jetbrains-mono ttf-font-awesome
+
 
 # Installing Yay
 sudo pacman -S --needed base-devel git
