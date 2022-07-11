@@ -5,7 +5,8 @@ cp /etc/X11/xinit/xinitrc .xinitrc
 # Installing Yay
 sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
-
+cd yay
+makepkg -si
 
 # Pacman Keyring refresh
 sudo pacman -Syu haveged
