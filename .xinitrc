@@ -8,7 +8,7 @@ xrandr --output Virtual-1 --mode 1920x1080 &
 picom -f &
 
 # Wallpaper
-nitrogen --restor &
+nitrogen --restore &
 
 # Loop
 while true; do
