@@ -1,5 +1,5 @@
 # Dispay Graphics
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom alacritty ranger pcmanfm ttf-jetbrains-mono ttf-font-awesome breeze-gtk alsa-utils pamixer playerctl
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom alacritty ranger pcmanfm exa ttf-jetbrains-mono ttf-font-awesome breeze-gtk alsa-utils pamixer playerctl
 
 
 # Installing Yay
