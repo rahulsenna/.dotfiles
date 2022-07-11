@@ -1,5 +1,5 @@
-edit /etc/sudoers
-
+# Dispay Graphics
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot chromium nitrogen picom
 
 # Installing Yay
 sudo pacman -S --needed base-devel git
