@@ -46,6 +46,9 @@ pip install pynput
 # Google Chrome
 yay -S google-chrome
 
+# Clion
+yay -S clion-jre
+
 
 sudo chmod +x ~/.dotfiles/link
 ./.dotfiles/link
