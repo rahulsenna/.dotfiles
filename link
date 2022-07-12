@@ -6,24 +6,33 @@ export DOTFILES=~/.dotfiles
 # Remove existing links
 
 rm ~/.xinitrc
-rm ~/.zshenv
-rm ~/.zprofile
+# rm ~/.zshenv
+# rm ~/.zprofile
 rm ~/.zshrc
 rm ~/.gitconfig
-rm ~/.gitignore_global
+# rm ~/.gitignore_global
 
 # Create symbolic links
 
 ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
-ln -s $DOTFILES/home/.zshenv ~/.zshenv
-ln -s $DOTFILES/home/.zprofile ~/.zprofile
+# ln -s $DOTFILES/home/.zshenv ~/.zshenv
+# ln -s $DOTFILES/home/.zprofile ~/.zprofile
 ln -s $DOTFILES/home/.zshrc ~/.zshrc
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
-ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
+# ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
 mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0
 
-ln -s $DOTFILES/config/nitrogen/config ~/.config/termite/config
-ln -s $DOTFILES/config/gtk-3.0/ ~/.config/starship.toml
+ln -s $DOTFILES/home/.config/nitrogen/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
+ln -s $DOTFILES/home/.config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
+
+ln -s $DOTFILES/home/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+
+mkdir -p ~/.config/sublime-text/Packages/User
+git clone https://github.com/rahulsenna/subl-user.git
+
+cp -R subl-user/* ~/.config/sublime-text/Packages/User/
+
+
 
 echo "All linked up."
