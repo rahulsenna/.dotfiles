@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+# Ensure this path is correct before running this script
+export DOTFILES=~/.dotfiles
+
+# Remove existing links
+
+rm ~/.xinitrc
+rm ~/.zshenv
+rm ~/.zprofile
+rm ~/.zshrc
+rm ~/.gitconfig
+rm ~/.gitignore_global
+
+# Create symbolic links
+
+ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
+ln -s $DOTFILES/home/.zshenv ~/.zshenv
+ln -s $DOTFILES/home/.zprofile ~/.zprofile
+ln -s $DOTFILES/home/.zshrc ~/.zshrc
+ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
+ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
+
+mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0
+
+ln -s $DOTFILES/config/nitrogen/config ~/.config/termite/config
+ln -s $DOTFILES/config/gtk-3.0/ ~/.config/starship.toml
+
+echo "All linked up."
