@@ -47,3 +47,6 @@ sudo pacman -Syu sublime-text
 
 sudo pacman -S python-pip
 pip install pynput
+
+# Google Chrome
+yay -S google-chrome
