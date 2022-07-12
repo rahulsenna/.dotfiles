@@ -21,11 +21,6 @@ git clone https://github.com/rahulsenna/dwm.git
 cd dwm;make;sudo make install;cd ..
 
 
-# Change shell to Zsh
-chsh -s /bin/zsh
-
-sudo chmod +x ~/.dotfiles/link
-./.dotfiles/link
 
 # Yay
 sudo pacman -S --needed base-devel git
@@ -50,3 +45,10 @@ pip install pynput
 
 # Google Chrome
 yay -S google-chrome
+
+
+sudo chmod +x ~/.dotfiles/link
+./.dotfiles/link
+
+# Change shell to Zsh
+chsh -s /bin/zsh
