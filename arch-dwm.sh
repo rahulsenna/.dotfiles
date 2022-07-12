@@ -24,7 +24,8 @@ cd dwm;make;sudo make install;cd ..
 # Change shell to Zsh
 chsh -s /bin/zsh
 
-./link
+sudo chmod +x .dotfiles/link
+./.dotfiles/link
 
 # Yay
 sudo pacman -S --needed base-devel git
