@@ -66,7 +66,7 @@ dwmstatus 2>&1 >/dev/null &
 # Loop
 while true; do
 	dwm >/dev/null 2>&1
-done &
+done
 
 
 # Execute DWM
