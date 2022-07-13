@@ -2,7 +2,7 @@
 
 
 # Install packages
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger pcmanfm exa breeze-gtk alsa-utils pamixer playerctl 
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger pcmanfm exa breeze-gtk alsa-utils pamixer playerctl xf86-video-intel
 
 # Install fonts
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome
@@ -52,6 +52,10 @@ yay -S clion-jre
 
 sudo chmod +x ~/.dotfiles/link
 ./.dotfiles/link
+
+# Intel GFX tearing fix
+
+sudo cp ~/.dotfiles/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
 
 # Change shell to Zsh
 chsh -s /bin/zsh

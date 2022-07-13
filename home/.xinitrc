@@ -54,7 +54,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Display Resolution
 # xrandr --output Virtual-1 --mode 1920x1080 &
 # xrandr --output HDMI-1 --mode 2560x1440 --rate 60 &;
-xrandr -s 2560x1440 --rate 60 &;
+xrandr -s 2560x1440 --rate 60 &
 
 
 # Compositor
@@ -71,6 +71,14 @@ while true; do
 	dwm >/dev/null 2>&1
 done
 
+# Keyboard repeat rate
+xset r rate 200 60 &
 
 # Execute DWM
 exec dwm &
+
+# 60 Hz Refresh Rate
+sleep 10 &
+xrandr --rate 60 &
+
+
