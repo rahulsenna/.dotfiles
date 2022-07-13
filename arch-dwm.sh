@@ -56,6 +56,7 @@ sudo chmod +x ~/.dotfiles/link
 # Intel GFX tearing fix
 
 sudo cp ~/.dotfiles/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf
+sudo cp ~/.dotfiles/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf
 
 # Change shell to Zsh
 chsh -s /bin/zsh

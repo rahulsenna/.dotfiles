@@ -79,6 +79,9 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 
 
+# Reboot and Shutdown
+alias reboot='sudo reboot'
+alias bye='sudo shutdown now'
 
 
 # Changing "ls" to "exa"

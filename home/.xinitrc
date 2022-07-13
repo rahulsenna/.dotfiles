@@ -51,10 +51,6 @@ fi
 # Java GUI Fix
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# Display Resolution
-# xrandr --output Virtual-1 --mode 1920x1080 &
-# xrandr --output HDMI-1 --mode 2560x1440 --rate 60 &;
-xrandr -s 2560x1440 --rate 60 &
 
 
 # Compositor
@@ -66,19 +62,21 @@ nitrogen --restore &
 # DWM Status
 dwmstatus 2>&1 >/dev/null &
 
-# Loop
-while true; do
-	dwm >/dev/null 2>&1
-done
+# Display Resolution
+# xrandr --output Virtual-1 --mode 1920x1080 &
+# xrandr --output HDMI-1 --mode 2560x1440 --rate 60 &;
+xrandr -s 2560x1440 &
+xrandr -r 60 &
 
 # Keyboard repeat rate
 xset r rate 200 60 &
 
+
+
+# Loop
+while true; do
+ dwm >/dev/null 2>&1
+done
+
 # Execute DWM
 exec dwm &
-
-# 60 Hz Refresh Rate
-sleep 10 &
-xrandr --rate 60 &
-
-
