@@ -2,7 +2,7 @@
 
 
 # Install packages
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger pcmanfm exa breeze-gtk alsa-utils pamixer playerctl pulseaudio
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger pcmanfm exa breeze-gtk alsa-utils pamixer playerctl 
 
 # Install fonts
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome

@@ -52,7 +52,10 @@ fi
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Display Resolution
-xrandr --output Virtual-1 --mode 1920x1080 &
+# xrandr --output Virtual-1 --mode 1920x1080 &
+# xrandr --output HDMI-1 --mode 2560x1440 --rate 60 &;
+xrandr -s 2560x1440 --rate 60 &;
+
 
 # Compositor
 picom -f &
@@ -70,4 +73,4 @@ done
 
 
 # Execute DWM
-exec dwm
+exec dwm &
