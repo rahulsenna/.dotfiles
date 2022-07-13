@@ -80,7 +80,7 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 
 # Reboot and Shutdown
-alias reboot='sudo reboot'
+alias reb='sudo reboot'
 alias bye='sudo shutdown now'
 
 

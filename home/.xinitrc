@@ -59,18 +59,21 @@ picom -f &
 # Wallpaper
 nitrogen --restore &
 
-# DWM Status
-dwmstatus 2>&1 >/dev/null &
 
 # Display Resolution
 # xrandr --output Virtual-1 --mode 1920x1080 &
 # xrandr --output HDMI-1 --mode 2560x1440 --rate 60 &;
-xrandr -s 2560x1440 &
-xrandr -r 60 &
+# xrandr -s 2560x1440 -r 60 &
+# xrandr -r 60 &
+
+# xrandr -s 2560x1440 -r 60 &
+xrandr -s 2560x1440_59.95 &
 
 # Keyboard repeat rate
 xset r rate 200 60 &
 
+# DWM Status
+dwmstatus 2>&1 >/dev/null &
 
 
 # Loop
