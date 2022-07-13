@@ -48,6 +48,7 @@ yay -S google-chrome
 
 # Clion
 yay -S clion-jre
+yay -S clion
 
 
 sudo chmod +x ~/.dotfiles/link
