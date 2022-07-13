@@ -19,7 +19,7 @@ done
 
 git clone https://github.com/rahulsenna/dwm.git
 cd dwm;make;sudo make install;cd ..
-
+cd ..
 
 
 # Yay
@@ -51,7 +51,7 @@ yay -S clion-jre
 
 
 sudo chmod +x ~/.dotfiles/link
-./.dotfiles/link
+./~/.dotfiles/link
 
 # Intel GFX tearing fix
 
