@@ -69,6 +69,7 @@ nitrogen --restore &
 # xrandr -s 2560x1440 -r 60 &
 xrandr -s 2560x1440_59.95 &
 
+
 # Keyboard repeat rate
 xset r rate 200 60 &
 

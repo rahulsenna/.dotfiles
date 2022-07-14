@@ -81,7 +81,11 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 # Reboot and Shutdown
 alias reb='sudo reboot'
-alias bye='sudo shutdown now'
+alias off='sudo shutdown now'
+alias hdd='sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows && sudo mount /dev/sdb1 ~/media/HDD && sudo mount /dev/sdc3 ~/media/SDD'
+# sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows
+# sudo mount /dev/sdb1 ~/media/HDD
+# sudo mount /dev/sdc3 ~/media/SDD
 
 
 # Changing "ls" to "exa"
