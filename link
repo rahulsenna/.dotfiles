@@ -21,12 +21,14 @@ ln -s $DOTFILES/home/.zshrc ~/.zshrc
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 # ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 
-mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0
+mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0 ~/.config/alacritty
 
 ln -s $DOTFILES/home/.config/nitrogen/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 ln -s $DOTFILES/home/.config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
 ln -s $DOTFILES/home/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
+ln -s $DOTFILES/home/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
 
 mkdir -p ~/.config/sublime-text/Packages/User
 git clone https://github.com/rahulsenna/subl-user.git

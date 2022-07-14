@@ -1,6 +1,7 @@
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
-
+export EDITOR=subl
+export VISUAL=subl
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -86,7 +87,8 @@ alias hdd='sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows && sudo mount /dev/sdb1 ~
 # sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows
 # sudo mount /dev/sdb1 ~/media/HDD
 # sudo mount /dev/sdc3 ~/media/SDD
-
+alias vpnu='sudo openvpn --config ~/openvpn/US.ovpn'
+alias vpns='sudo openvpn --config ~/openvpn/Singapore.ovpn'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
