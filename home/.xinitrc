@@ -74,7 +74,7 @@ xrandr -s 2560x1440_59.95 &
 xset r rate 200 60 &
 
 # DWM Status
-dwmstatus 2>&1 >/dev/null &
+#slstatus 2>&1 >/dev/null &
 
 
 # Loop

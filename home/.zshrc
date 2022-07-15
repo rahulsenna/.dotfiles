@@ -87,8 +87,10 @@ alias hdd='sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows && sudo mount /dev/sdb1 ~
 # sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows
 # sudo mount /dev/sdb1 ~/media/HDD
 # sudo mount /dev/sdc3 ~/media/SDD
-alias vpnu='sudo openvpn --config ~/openvpn/US.ovpn'
-alias vpns='sudo openvpn --config ~/openvpn/Singapore.ovpn'
+alias vpnu='openvpn3 session-start --config ~/openvpn/US.ovpn'
+alias vpnou='openvpn3 session-manage --disconnect --config ~/openvpn/US.ovpn'
+alias vpns='openvpn3 session-start --config ~/openvpn/Singapore.ovpn'
+alias vpnos='openvpn3 session-manage --disconnect --config ~/openvpn/Singapore.ovpn'
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
