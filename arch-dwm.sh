@@ -9,16 +9,13 @@ sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-font-awesome
 
 # DWM
 mkdir .suckless
-cd .suckless;
-repos=( "dmenu" "dwmstatus" "st" "slock" )
+cd .suckless
+repos=( "dmenu" "slstatus" "dwm" "slock" )
 for repo in ${repos[@]}
 do
-    git clone git://git.suckless.org/$repo
+    git clone https://github.com/rahulsenna/$repo.git
     cd $repo;make;sudo make install;cd ..
 done
-
-git clone https://github.com/rahulsenna/dwm.git
-cd dwm;make;sudo make install;cd ..
 cd ..
 
 
@@ -27,7 +24,7 @@ sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay;makepkg -si;cd ..
 
-#SublimeText
+# Sublime Text
 sudo pacman -Syu haveged
 sudo systemctl start haveged
 sudo systemctl enable haveged

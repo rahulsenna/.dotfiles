@@ -84,6 +84,7 @@ key[Control-Right]="${terminfo[kRIT5]}"
 alias reb='sudo reboot'
 alias off='sudo shutdown now'
 alias hdd='sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows && sudo mount /dev/sdb1 ~/media/HDD && sudo mount /dev/sdc3 ~/media/SDD'
+alias windesk='cd ~/media/Windows/Users/AgentOfChaos/Desktop'
 # sudo ntfs-3g /dev/nvme0n1p2 ~/media/Windows
 # sudo mount /dev/sdb1 ~/media/HDD
 # sudo mount /dev/sdc3 ~/media/SDD
