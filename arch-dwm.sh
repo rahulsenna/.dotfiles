@@ -46,7 +46,7 @@ yay -S google-chrome
 # Clion
 yay -S clion-jre
 yay -S clion
-
+yay -S openvpn3
 
 sudo chmod +x ~/.dotfiles/link
 ./~/.dotfiles/link
