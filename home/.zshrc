@@ -93,6 +93,10 @@ alias vpnou='openvpn3 session-manage --disconnect --config ~/openvpn/US.ovpn'
 alias vpns='openvpn3 session-start --config ~/openvpn/Singapore.ovpn'
 alias vpnos='openvpn3 session-manage --disconnect --config ~/openvpn/Singapore.ovpn'
 
+# vim
+alias vim='nvim'
+
+
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
