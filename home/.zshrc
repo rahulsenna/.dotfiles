@@ -95,6 +95,7 @@ alias vpnos='openvpn3 session-manage --disconnect --config ~/openvpn/Singapore.o
 
 # vim
 alias vim='nvim'
+alias mc='micro'
 
 
 # Changing "ls" to "exa"
