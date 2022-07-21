@@ -24,11 +24,10 @@ ln -s $DOTFILES/home/.autostart ~/.autostart
 
 mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0 ~/.config/alacritty
 
-ln -s $DOTFILES/home/.config/nitrogen/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
-ln -s $DOTFILES/home/.config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
-
-ln -s $DOTFILES/home/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini
-ln -s $DOTFILES/home/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s $DOTFILES/home/.config/nitrogen ~/.config/nitrogen
+ln -s $DOTFILES/home/.config/gtk-3.0 ~/.config/gtk-3.0
+ln -s $DOTFILES/home/.config/alacritty ~/.config/alacritty
+ln -s $DOTFILES/home/.config/micro ~/.config/micro
 
 mkdir -p ~/.config/sublime-text/Packages/User
 git clone https://github.com/rahulsenna/subl-user.git
