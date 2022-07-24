@@ -1,7 +1,7 @@
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
-export EDITOR=subl
-export VISUAL=subl
+export EDITOR=micro
+export VISUAL=micro
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile

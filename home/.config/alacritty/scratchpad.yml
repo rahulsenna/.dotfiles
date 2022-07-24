@@ -1,0 +1,12 @@
+font:
+  size: 15.0
+key_bindings:
+- { key: V, mods: Control, action: Paste }
+- { key: C, mods: Control, action: Copy }
+- { key: C, mods: Control|Shift, chars: "\x03" }
+- { key: C, mods: Control, chars: "\x1C" }
+
+window:
+   dimensions:
+     columns: 133
+     lines: 40
