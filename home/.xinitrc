@@ -76,6 +76,7 @@ xset r rate 200 60 &
 # DWM Status
 #slstatus 2>&1 >/dev/null &
 
+numlockx &
 
 # Loop
 while true; do
