@@ -79,7 +79,8 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 
 
-
+#Droidcam
+alias cam='droidcam-cli -a -v -size=1920x1080 192.168.1.103 4747'
 # Reboot and Shutdown
 alias reb='sudo reboot'
 alias off='sudo shutdown now'
