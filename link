@@ -21,6 +21,8 @@ ln -s $DOTFILES/home/.zshrc ~/.zshrc
 ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 # ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
 ln -s $DOTFILES/home/.autostart ~/.autostart
+ln -s $DOTFILES/home/.config/chrome-flags.conf ~/.config/chrome-flags.conf
+ln -s $DOTFILES/home/.config/brave-flags.conf ~/.config/brave-flags.conf
 
 mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0 ~/.config/alacritty
 
