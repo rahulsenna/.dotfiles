@@ -23,10 +23,16 @@ ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
 ln -s $DOTFILES/home/.autostart ~/.autostart
 ln -s $DOTFILES/home/.config/chrome-flags.conf ~/.config/chrome-flags.conf
 ln -s $DOTFILES/home/.config/brave-flags.conf ~/.config/brave-flags.conf
+
+# Im Wheel
 ln -s ~/.dotfiles/home/.imwheelrc ~/.imwheelrc
+ln -s $DOTFILES/home/.config/systemd ~/.config/systemd
+systemctl --user daemon-reload
+systemctl --user enable --now imwheel
+journalctl --user --unit imwheel
+
 
 # mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0 ~/.config/alacritty
-ln -s $DOTFILES/home/.config/systemd ~/.config/systemd
 ln -s $DOTFILES/home/.config/nitrogen ~/.config/nitrogen
 ln -s $DOTFILES/home/.config/gtk-3.0 ~/.config/gtk-3.0
 ln -s $DOTFILES/home/.config/alacritty ~/.config/alacritty
