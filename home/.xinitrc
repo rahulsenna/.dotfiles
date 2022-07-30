@@ -75,13 +75,14 @@ xset r rate 200 60 &
 
 # DWM Status
 #slstatus 2>&1 >/dev/null &
+slstatus &
 
 numlockx &
 
 # Loop
 while true; do
  dwm >/dev/null 2>&1
-done
+ done
 
 # Execute DWM
 exec dwm &
