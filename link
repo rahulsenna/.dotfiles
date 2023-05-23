@@ -1,0 +1,55 @@
+#!/usr/bin/env sh
+
+# Ensure this path is correct before running this script
+export DOTFILES=~/.dotfiles
+
+# Remove existing links
+
+rm ~/.xinitrc
+# rm ~/.zshenv
+# rm ~/.zprofile
+rm ~/.zshrc
+rm ~/.gitconfig
+# rm ~/.gitignore_global
+
+# Create symbolic links
+
+ln -s $DOTFILES/home/.xinitrc ~/.xinitrc
+# ln -s $DOTFILES/home/.zshenv ~/.zshenv
+# ln -s $DOTFILES/home/.zprofile ~/.zprofile
+ln -s $DOTFILES/home/.zshrc ~/.zshrc
+ln -s $DOTFILES/home/.gitconfig ~/.gitconfig
+# ln -s $DOTFILES/home/.gitignore_global ~/.gitignore_global
+ln -s $DOTFILES/home/.autostart ~/.autostart
+ln -s $DOTFILES/home/.config/chrome-flags.conf ~/.config/chrome-flags.conf
+ln -s $DOTFILES/home/.config/brave-flags.conf ~/.config/brave-flags.conf
+
+# Im Wheel
+ln -s ~/.dotfiles/home/.imwheelrc ~/.imwheelrc
+ln -s $DOTFILES/home/.config/systemd ~/.config/systemd
+# systemctl --user daemon-reload
+# systemctl --user enable --now imwheel
+# journalctl --user --unit imwheel
+
+
+# mkdir -p ~/.config/nitrogen ~/.config/gtk-3.0 ~/.config/alacritty
+ln -s $DOTFILES/home/.config/nitrogen ~/.config/nitrogen
+ln -s $DOTFILES/home/.config/gtk-3.0 ~/.config/gtk-3.0
+ln -s $DOTFILES/home/.config/alacritty ~/.config/alacritty
+ln -s $DOTFILES/home/.config/micro ~/.config/micro
+ln -s $DOTFILES/home/.config/ranger ~/.config/ranger
+
+mkdir -p ~/.config/sublime-text/Packages/User
+git clone https://github.com/rahulsenna/subl-user.git ~/.config/sublime-text/Packages/User
+
+
+# cp -R subl-user/* ~/.config/sublime-text/Packages/User/
+
+# ln -s ~/.dotfiles/home/vs_key ~/vs_key
+ln -s ~/.dotfiles/home/.config/nvim ~/.config/nvim
+
+# FZF && FD
+ln -s ~/.dotfiles/home/.fdignore ~/.fdignore
+ln -s ~/.dotfiles/home/.fzf.zsh ~/.fzf.zsh
+
+echo "All linked up."

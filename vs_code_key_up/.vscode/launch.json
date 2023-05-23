@@ -1,0 +1,88 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run: JS/TS: Node",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "console": "integratedTerminal",
+
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            // "console": "integratedTerminal",
+            // "justMyCode": true
+        },
+
+        {
+            "name": "GDB",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: GCC Build",
+            "postDebugTask": "C/C++: GCC Build",
+             
+    
+        },
+
+        {
+            "name": "GDB for C",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build C File",
+            "postDebugTask": "Build C File",
+             
+    
+        }
+    ]
+}

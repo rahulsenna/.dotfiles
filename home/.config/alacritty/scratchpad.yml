@@ -1,0 +1,35 @@
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrains Mono
+    style: Bold Italic
+
+  size: 15.0
+key_bindings:
+- { key: V, mods: Control, action: Paste }
+- { key: C, mods: Control, action: Copy }
+- { key: C, mods: Control|Shift, chars: "\x03" }
+- { key: C, mods: Control, chars: "\x1C" }
+- { key: Return, mods: Control|Shift, chars: "\xff" }
+- { key: 53, mods: Control|Shift, chars: "\xfe" }
+- { key: Space, mods: Shift, chars: "\xfd" }
+- { key: Back, mods: Control, chars: "\x7f" }
+- { key: I, mods: Control, chars: "" }
+- { key: Semicolon, mods: Control, chars: "\xfd" }
+
+window:
+   opacity: 0.97
+   dimensions:
+     columns: 133
+     lines: 40

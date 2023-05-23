@@ -1,0 +1,6 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Ctrl-/": "lua:comment.comment",
+    "CtrlBackslash": "CopyLine|Copy",
+    "CtrlUnderscore": "lua:comment.comment"
+}

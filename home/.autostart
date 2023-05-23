@@ -1,0 +1,10 @@
+#!/bin/sh
+
+xrandr -r 60 &
+# slstatus 2>&1 >/dev/null &
+# imwheel &
+~/.dotfiles/vs_code_key_up/key_up_x11 &
+~/.dotfiles/vs_code_key_up/key_down_x11 &
+
+# kill $(ps aux | grep 'dwm' | awk '{print $2}')
+# kills dwm

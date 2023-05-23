@@ -1,0 +1,58 @@
+https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel
+
+Installation
+Intel
+Intel graphics open-source drivers support VA-API:
+
+HD Graphics series starting from Broadwell (2014) and newer are supported by 
+pacin intel-media-driver.
+
+GMA 4500 (2008) and newer GPUs, including HD Graphics up to Coffee Lake (2017) are supported by 
+pacin libva-intel-driver.
+
+GMA 4500 H.264 decoding is supported by libva-intel-driver-g45-h264AUR, see Intel#Hardware accelerated H.264 decoding on GMA 4500.
+Haswell Refresh to Skylake VP9 decoding and Broadwell to Skylake hybrid VP8 encoding is supported by intel-hybrid-codec-driverAUR.
+Skylake or later also need linux-firmware.
+Also see VAAPI supported hardware and features.
+
+
+https://wiki.archlinux.org/title/Chromium#Force_GPU_acceleration
+
+-------------
+
+For Intel HD graphics
+pacin intel-media-driver
+
+and in browser flags: --use-gl=egl
+
+
+Install these if necessary
+pacin libva-intel-driver
+yayin libva-intel-driver-g45-h264 libva-vdpau-driver-vp9-git intel-hybrid-codec-driver
+
+update linux kernel
+
+Verification:----------------------------------
+mpv --hwdec=auto video_filename
+
+pacin intel-gpu-tools libva-utils
+intel_gpu_top as root
+vainfo 
+-> VAEntrypointVLD means card is capable to decode this format
+-> VAEntrypointEncSlice means that you can encode to this format.
+------------------------------------------------
+
+Latest for Intel:-------------------------------
+# only Install these two and nothing else
+yayin libva-intel-driver-g45-h264 intel-hybrid-codec-driver
+
+
+
+
+FireFox: 
+about:config
+gfx.webrender.all          -> true.
+media.ffmpeg.vaapi.enabled -> true
+
+https://wiki.archlinux.org/title/Firefox#Hardware_video_acceleration
+-------------------------------------------------

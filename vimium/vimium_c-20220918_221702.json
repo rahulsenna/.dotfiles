@@ -1,0 +1,25 @@
+{
+	"name": "Vimium C",
+	"@time": "9/18/2022, 10:17:02 PM",
+	"time": 1663519622096,
+	"environment": {
+		"extension": "1.99.3",
+		"platform": "linux",
+		"chromium": "105"
+	},
+	"exclusionRules": [],
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"map F LinkHints.activateOpenIncognito",
+		"map u previousTab",
+		"map o nextTab",
+		"mapKey <k> <j>",
+		"mapKey <i> <k>",
+		"mapKey <j> <h>",
+		"map a enterInsertMode",
+		""
+	],
+	"linkHintCharacters": "sadlewcmpghuo",
+	"vimSync": true
+}
