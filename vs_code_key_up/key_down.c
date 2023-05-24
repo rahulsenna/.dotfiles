@@ -46,7 +46,7 @@ int main()
         {
           {
               Window newFocus = getCurrentFocus(display);
-              if (newFocus != curFocus)
+              if (newFocus != 1 && newFocus != curFocus)
               {
                 curFocus = newFocus;
                 
@@ -63,13 +63,14 @@ int main()
           }   
         }
     
-    
-        len = XLookupString(&ev.xkey, buf, 16, &ks, &comp);
-
-        if (ks == XK_Shift_L || ks == XK_Shift_R)// Shift Keys
-        {
-            XSendEvent(display, curFocus, True, 0, (XEvent *) &F15);
-        }    
+        if (ev.type  == KeyPress)    
+        {   
+            len = XLookupString(&ev.xkey, buf, 16, &ks, &comp);
+            if (ks == XK_Shift_L || ks == XK_Shift_R)// Shift Keys
+            {
+                XSendEvent(display, curFocus, True, 0, (XEvent *) &F15);
+            }    
+        }
     }
 }
 

@@ -5,6 +5,15 @@
 #include <X11/keysym.h>
 #include <string.h>
 
+#if 0 
+    #include <stdio.h>
+    int catcher( Display *disp, XErrorEvent *xe )
+    {
+            printf( "Something bad had happened.\n" );
+            return 0;
+    }
+#endif
+
 Window getCurrentFocus(Display *display)
 {
     Window curFocus;
@@ -12,6 +21,7 @@ Window getCurrentFocus(Display *display)
     XGetInputFocus(display, &curFocus, &revert);
     return curFocus;
 }
+
 
 int main()
 {
@@ -40,6 +50,8 @@ int main()
     F18.keycode = XK_F7;
     F19.keycode = XK_F8;
 
+    // XSetErrorHandler( catcher ); // <-- inserted to set error handler
+
     while (1)
     {
         XEvent ev;
@@ -49,7 +61,7 @@ int main()
         {
           {
               Window newFocus = getCurrentFocus(display);
-              if (newFocus != curFocus)
+              if (newFocus != 1 && newFocus != curFocus)
               {
                 curFocus = newFocus;
                 
@@ -71,8 +83,10 @@ int main()
               }
           }   
         }
-    
-        
+
+        if(ev.type == KeyRelease)
+        {
+            
         len = XLookupString(&ev.xkey, buf, 16, &ks, &comp);
         if (len > 0 && isprint(buf[0]))
         {
@@ -97,8 +111,11 @@ int main()
                 XSendEvent(display, curFocus, True, 0, (XEvent *)&F15);
             }
         }
+        }
     
     }
+
+    // XSetErrorHandler( NULL ); // <-- restore the default error handler
 
     XCloseDisplay(display);
     return 0;
