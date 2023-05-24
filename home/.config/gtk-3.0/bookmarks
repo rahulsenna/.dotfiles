@@ -4,4 +4,5 @@ file:///home/agent/dev
 file:///home/agent/werk/AntiPIracy/proc
 file:///home/agent/werk/steganography
 file:///home/agent/werk
-sftp://192.168.1.11:8022/data/data/com.termux/files/home/internal Redmi SFTP
+sftp://phone/data/data/com.termux/files/home/internal Redmi SFTP
+sftp://laptop/home/agent HP Laptop
