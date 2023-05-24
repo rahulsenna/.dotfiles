@@ -90,7 +90,7 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 
 alias kill_dwm='kill `ps -C dwm fch -o pid | head -n 1`'
-alias kill_keys='kill `ps -C key_up_x11 fch -o pid` && kill `ps -C key_down_x11 fch -o pid`'
+alias kill_keys='kill `ps -C key_up_x11 fch -o pid` ; kill `ps -C key_down_x11 fch -o pid`'
 alias skill='kill -TERM `ps -C supervisord fch -o pid | head -n 1`'
 alias srel='kill -HUP `ps -C supervisord fch -o pid | head -n 1`'
 alias greload='kill -HUP `ps -C gunicorn fch -o pid | head -n 1`'
