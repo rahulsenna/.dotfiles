@@ -2,7 +2,7 @@
 
 
 # Install packages
-sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger thunar exa breeze-gtk alsa-utils pamixer playerctl xf86-video-intel ntfs-3g openssh micro xclip numlockx flameshot imwheel gnome-keyring seahorse fd pavucontrol cmake ninja clang llvm lldb gdb nodejs krita eog glu speedcrunch zip unzip polkit polkit-gnome
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot nitrogen picom zsh zsh-completions alacritty ranger thunar exa breeze-gtk alsa-utils pamixer playerctl xf86-video-intel ntfs-3g openssh micro xclip numlockx flameshot imwheel gnome-keyring seahorse fd pavucontrol cmake ninja clang llvm lldb gdb nodejs krita eog glu speedcrunch zip unzip polkit polkit-gnome reflector
 
 # Install fonts
 sudo pacman -S --noconfirm ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-liberation ttf-sourcecodepro-nerd ttf-font-awesome ttf-indic-otf wqy-microhei-lite adobe-source-han-sans-jp-fonts noto-fonts-emoji otf-latinmodern-math otf-latin-modern
