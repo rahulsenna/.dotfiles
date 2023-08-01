@@ -15,7 +15,7 @@ zstyle :compinstall filename '/home/agent/.zshrc'
 
 export PATH=/home/agent/.local/share/JetBrains/Toolbox/scripts:$PATH
 
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
