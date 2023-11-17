@@ -82,11 +82,10 @@ key[Control-Right]="${terminfo[kRIT5]}"
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
 [[ -n "${key[Control-Right]}" ]] && bindkey -- "${key[Control-Right]}" forward-word
 
-# alias getip="aws ec2 describe-instances --query 'Reservations[0].Instances[0].PublicIpAddress' --output text --instance-ids $instance"
-# alias dwnld='curl `getip`/aws_sg.ovpn --output ~/openvpn/aws_sg.ovpn'
-# alias create1="aws ec2 run-instances --image-id ami-04bc6caca307e18da --instance-type t2.micro --key-name GIGABYTE --security-group-ids sg-3e75f945 --user-data file://~/openvpn/user_data.txt --output text --query 'Instances[0].InstanceId'"
-# alias create="export instance=`create1` && source ~/.zshrc"
-# alias destroy="aws ec2 terminate-instances --instance-ids $instance --output text"
+alias getip="aws ec2 describe-instances --query 'Reservations[-1].Instances[0].PublicIpAddress' --output text"
+alias dwnld='curl `getip`/aws_sg.ovpn --output ~/openvpn/aws_sg.ovpn'
+alias create="aws ec2 run-instances --image-id ami-04bc6caca307e18da --instance-type t2.micro --key-name GIGABYTE --security-group-ids sg-04e9d4d0937a4decf --user-data file://~/openvpn/user_data.txt --output text --query 'Instances[0].InstanceId'"
+alias delete_all="aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --output text | xargs -n 1 aws ec2 terminate-instances --instance-ids"
 
 
 alias kill_dwm='kill `ps -C dwm fch -o pid | head -n 1`'
@@ -125,7 +124,7 @@ alias vm='sudo virsh net-start default ; virt-manager -c qemu:///system --show-d
 alias vmnet='sudo virsh net-start default'
 # vim
 alias vim='nvim'
-alias mc='nvim'
+alias mc='micro'
 alias vi='nvim'
 # extract and package files/dirs
 alias targzm='tar -czvf'
@@ -168,7 +167,7 @@ alias clearcache='sudo pacman -Sc && yay -Scc' # clear pacman cache
 alias download='aria2c --file-allocation=none -c -x 10 -s 10'
 
 alias reloz='source ~/.zshrc'                   # refresh zshrc
-alias oz='nvim ~/.zshrc'                   # refresh zshrc
+alias oz='micro ~/.zshrc'                   # refresh zshrc
 
 # get fastest mirrors
 alias mir="sudo reflector --save /etc/pacman.d/mirrorlist --sort rate --country India -l 70 --verbose"
@@ -185,7 +184,7 @@ alias fgrep='fgrep --color=auto'
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
+# alias rm='rm -i'
 
 # adding flags
 alias size='du -sh'
